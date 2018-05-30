@@ -5,14 +5,19 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.print("Введите число: ");
+        System.out.print("Введите № задачи: ");
         Scanner scan = new Scanner(System.in);
-        String num = scan.next();
+        String choice = scan.next();
 
-        try {
-            FirstTask.print(Integer.parseInt(num));
-        } catch (NumberFormatException e) {
-            System.out.println("Вы ввели не целое число.");
+        switch (choice) {
+            case "1": {
+                FirstTask.print();
+                break;
+            }
+            default: {
+                System.out.println("Задача отсутствует");
+                break;
+            }
         }
     }
 }

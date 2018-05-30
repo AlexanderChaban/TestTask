@@ -1,5 +1,7 @@
 package first_task;
 
+import java.util.Scanner;
+
 public class FirstTask {
 
     private static String analyze_1(int num) {
@@ -25,7 +27,15 @@ public class FirstTask {
         }
     }
 
-    public static void print(int num) {
-        System.out.println(analyze_1(num) + " : " + analyze_2(num));
+    public static void print() {
+        System.out.print("Введите число: ");
+        Scanner scan = new Scanner(System.in);
+        String num = scan.next();
+
+        try {
+            System.out.println(analyze_1(Integer.parseInt(num)) + " : " + analyze_2(Integer.parseInt(num)));
+        } catch (NumberFormatException e) {
+            System.out.println("Вы ввели не целое число.");
+        }
     }
 }
