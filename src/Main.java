@@ -1,4 +1,5 @@
 import first_task.FirstTask;
+import second_task.SecondTask;
 
 import java.util.Scanner;
 
@@ -12,6 +13,10 @@ public class Main {
         switch (choice) {
             case "1": {
                 FirstTask.print();
+                break;
+            }
+            case "2": {
+                SecondTask.print();
                 break;
             }
             default: {
